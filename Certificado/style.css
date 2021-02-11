@@ -1,0 +1,35 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main *{
+    margin-bottom: 8px;
+}
+
+input{
+    font-size: large;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+
+.download{
+    background: yellowgreen;
+    color: #fff;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}

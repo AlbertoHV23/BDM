@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Certificado</title>
+</head>
+<body>
+    <main>
+       
+       <img src="LogoBO.png" alt="Logo Change The world">
+       <h1>Obtén Cualquier certificado</h1>
+       <section class="datos"></section>
+        <label for="name">Escribe tu nombre para el certificado:</label>
+        <input required type="text" placeholder="Nombre" id="name" minlength="4" maxlength="40">
+        <label for="">Escribe el curso:</label>
+        <input type="text" id="curso" placeholder="Nombre del curso">
+        <Button id="submitBtn" class="download">Descargalo</Button>
+
+         <iframe src="" id="mypdf" frameborder="0" width="400px" height="400px"></iframe>
+    </main>
+
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+    <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
+    <script src="FileSaver.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
