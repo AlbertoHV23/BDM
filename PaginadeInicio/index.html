@@ -31,19 +31,19 @@
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link active" data-scroll-nav="0" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" data-scroll-nav="1" href="#" >Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Comments</a>
+                        <a class="nav-link" data-scroll-nav="2" href="#">Comments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Prices</a>
+                        <a class="nav-link" data-scroll-nav="3" href="#">Prices</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" data-scroll-nav="4" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -52,7 +52,7 @@
     <!-- Navbar Final -->
 
     <!-- Home Inicio -->
-    <section class="home d-flex align-items-center">
+    <section class="home d-flex align-items-center" id="home" data-scroll-index="0" >
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-7">
@@ -77,7 +77,7 @@
     </section>
     <!-- Home Final -->
     <!-- Features Inicio -->
-    <section class="features section-padding">
+    <section class="features section-padding" id="features" data-scroll-index="1">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -115,7 +115,7 @@
     <!-- Features Final -->
 
     <!-- Steps Incio -->
-    <section class="steps section-padding">
+    <section class="steps section-padding" >
         <div class="contaner">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -151,8 +151,8 @@
     </section>
     <!-- Steps Final -->
     
-    <!-- Comentarios Incio -->
-    <section class="comments section-padding">
+    <!-- Comments Incio -->
+    <section class="comments section-padding" id="comments" data-scroll-index="2">
         <div class="container">
             <div class="row justify-content-center">
                 <dv class="col-lg-8">
@@ -165,7 +165,7 @@
                 <div class="owl-carousel comments-carousel">
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>It is the best platform to learn.</p>
@@ -181,7 +181,7 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>It is easy to handle and learn fast.</p>
@@ -197,7 +197,7 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>The tool is very practical for teachers.</p>
@@ -213,7 +213,7 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>yes, of course it is cool.</p>
@@ -231,7 +231,152 @@
             </div>
         </div>
     </section>
-    <!-- Comentarios Final -->
+    <!-- Comments Final -->
+
+    <!-- Prices Inicio -->
+    <section class="pricies section-padding" id="prices" data-scroll-index="3">
+        <div class="conainer">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Price <span>plan</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="prices-plan">
+                        <div class="price-header">
+                            <h3>Basic</h3>
+                        </div>
+                        <div class="price-price">
+                            <span class="currency">$</span>
+                            <span class="price">19</span>
+                            <span class="type">One Video</span>
+                        </div>
+                        <div class="price-body">
+                            <ul>
+                                <li><i class="fas fa-times"></i> Access to all course videos</li>
+                                <li><i class="fas fa-times"></i> Choose the resolution</li>
+                                <li><i class="fas fa-times"></i> Download videos</li>
+                                <li><i class="fas fa-times"></i> No commercials</li>
+                                <li><i class="fas fa-times"></i> Course certificate</li>
+                            </ul>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#" class="btn btn-2">Get plan</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="prices-plan">
+                        <div class="price-header">
+                            <h3>Pro</h3>
+                        </div>
+                        <div class="price-price">
+                            <span class="currecy">$</span>
+                            <span class="price">499</span>
+                            <span class="type">All Course</span>
+                        </div>
+                        <div class="price-body">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Access to all course videos</li>
+                                <li><i class="fas fa-check"></i> Choose the resolution</li>
+                                <li><i class="fas fa-check"></i> Download videos</li>
+                                <li><i class="fas fa-check"></i> No commercials</li>
+                                <li><i class="fas fa-check"></i> Course certificate</li>
+                            </ul>
+                        </div>
+                        <div class="price-footer">
+                            <a href="#" class="btn btn-3">Get plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Prices Final -->
+
+    <!-- Team Inicio -->
+    <section class="team section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="-col-lg-8">
+                    <div class="section-title">
+                        <h2>Team <span>Members</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel team-carousel">
+                    <div class="team-item">
+                        <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="Alberto Daniel Hernandez Villanueva">
+                        <h3>Alberto Daniel Hernandez Villanueva</h3>
+                        <span>Frontend/Backend</span>
+                    </div>
+                    <div class="team-item">
+                        <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="Luis Gerardo Becerra Jiménez">
+                        <h3>Luis Gerardo Becerra Jiménez</h3>
+                        <span>Frontend/Backend</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Final -->
+
+    <!-- Conact Inicio -->
+   <footer class="footer" data-scroll-index="4">
+       <div class="container">
+           <div class="row">
+               <div class="col-lg-3 col-md-6">
+                   <div class="footer-col">
+                       <h3>About us</h3>
+                       <p>We are a company that is dedicated to giving the opportunity to learn and earn money doing what you like.</p>
+                   </div>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms & conditions</a></li>
+                            <li><a href="#">Lates blogs</a></li>
+                            <li><a href="#">Page services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Quick links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#comments">Comments</a></li>
+                            <li><a href="#prices">Prices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Contact us</h3>
+                        <ul>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instragram</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+           <div class="row">
+               <div class="col-lg-12">
+                   <p class="copyright-text">&copy;2021 @ Change the world</p>
+               </div>
+           </div>
+       </div>
+   </footer>
+    <!-- Conact Final -->
 
     <!-- Video Popup Inicio -->
     <div class="video-popup">
@@ -252,6 +397,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- owl carousel js -->
     <script src="/PaginadeInicio/JS/owl.carousel.min.js"></script>
+    <!-- ScrollIt js -->
+    <script src="/PaginadeInicio/JS/scrollIt.min.js"></script>
     <!-- main js -->
     <script src="/PaginadeInicio/JS/main.js"></script>
 </body>

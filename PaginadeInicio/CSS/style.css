@@ -43,7 +43,7 @@ ul{
     list-style: none;
 }
 
-.btn-1{
+.btn{
     background-color: #ffffff;
     padding: 12px 30px;
     border: none;
@@ -56,10 +56,10 @@ ul{
     font-weight: 500;
 }
 
-.btn-1:focus{
+.btn:focus{
     box-shadow: var(--shadow-black-300);
 }
-.btn-1:hover{
+.btn:hover{
     color: #ffffff;
     background-color: var(--main-color);
 }
@@ -408,4 +408,169 @@ ul{
     display: inline-block;
     font-size: 16px;
     color: var(--color-2);
+}
+
+/* Prices */
+.prices-plan{
+    box-shadow: var(--shadow-black-100);
+    border-radius: 10px;
+}
+
+.prices-plan .price-header{
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--black-alpha-100);
+}
+
+.prices-plan .price-header h3{
+    text-align: center;
+    font-size: 30px;
+    color: var(--black-900);
+    font-weight: 500;
+    text-transform: capitalize;
+    margin-top: 0;
+}
+
+.prices-plan .price-price{
+    padding: 40px 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 0.7;
+}
+
+.prices-plan .price-price .currency{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin-right: 5px;
+    align-self: flex-start;
+}
+
+.prices-plan .price-price .price{
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.prices-plan .price-price .type{
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--black-400);
+    margin-right: 5px;
+    align-self: flex-end;
+    text-transform: uppercase;
+}
+
+.prices-plan .price-body{
+    padding: 0 30px;
+}
+
+.prices-plan .price-body ul li{
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    padding: 10px 0 10px 30px;
+    border-bottom: 0.5px solid var(--black-alpha-100);
+    line-height: 26px;
+    position: relative;
+}
+.prices-plan .price-body ul li:last-child{
+    border-bottom: none;
+}
+
+.prices-plan .price-body ul li i{
+    color: var(--main-color);
+    position: absolute;
+    left: 0;
+    top: 12px;
+}
+
+.prices-plan .price-footer{
+    padding: 20px 30px 30px;
+    text-align: center;
+}
+
+/* Team */
+.team{
+    background-color: var(--black-100);
+}
+
+.team-item{
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-black-100);    
+}
+.team-item img{
+   width: 100%;
+ 
+}
+
+.team-item h3{
+    font-size: 18px;
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 15px 0 5px;
+    text-transform: capitalize;   
+}
+
+.team-item span{
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--black-400);
+    text-transform: capitalize;   
+}
+
+/* footer */
+.footer{
+    background-color: var(--main-color);
+    padding: 50px 0;
+}
+
+.footer-col h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 25px;
+    text-transform: capitalize;
+}
+
+.footer-col p{
+    font-size:16px;
+    color: rgba(255, 255, 255, 0.9); 
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0;
+}
+
+.footer-col ul{
+    margin: 0;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size:16px;
+    color: rgba(255, 255, 255, 0.9); 
+    font-weight: 300;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover{
+    padding-left: 5px;
+
+}
+
+.footer .copyright-text{
+    padding: 20px 0;
+    text-align: center;
+    font-size:16px;
+    color: rgba(255, 255, 255, 0.9); 
+    font-weight: 300;
+    margin:50px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }

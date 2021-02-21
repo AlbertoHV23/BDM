@@ -63,4 +63,24 @@ $(document).ready(function(){
         }
     });
 
+    /* team carousel */
+    $('.team-carousel').owlCarousel({
+        loop:true,
+        margin:0,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:2,
+            }
+        }
+    });
+
+    /* contact scroll */
+    $.scrollIt({
+        topOffset: -45
+    });
+
 });
