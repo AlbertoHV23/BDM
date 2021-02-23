@@ -3,10 +3,8 @@
 
 /*CSS*/
 :root{
-    --main-color:#7857fe;
-    --color-1: #e91e63;
+    --main-color:#665df5;
     --color-2: #efb810;
-    --color-3: #09d69c;
     --bg-dark: #2b2c2f;
     --main-a-color-negro:var(--main-color);
     --negro-a-main-color:var(--bg-dark);
@@ -67,6 +65,7 @@ ul{
 .section-padding{
     padding: 80px;
 }
+
 .section-title{
     margin-bottom: 60px;
 }
@@ -79,6 +78,20 @@ ul{
 }
 .section-title h2 span{
     color: var(--color-2);
+}
+
+.section-rating{
+    font-size: 18px;
+    color: var(--color-2);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.section-rating h3{
+    font-size: 16px;
+    color: var(--black-900);
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
 .owl-carousel .owl-dots{
