@@ -18,7 +18,7 @@ $(document).ready(function(){
             $( "#text-course" ).show( "slow", function() {});
             $( "#navbar-nav-course" ).show();
             $( "#img-logo" ).hide( "slow", function() {});
-            $( "#navbar-nav" ).hide( "slow", function() {});
+            $( "#navbar-nav" ).hide( "fast", function() {});
         }
         else if($(this).scrollTop()<420){
             $( "#text-course" ).hide( "slow", function() {});
@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     /* contact scroll */
     $.scrollIt({
-        topOffset: -40
+        topOffset: -50
     });
 
 });

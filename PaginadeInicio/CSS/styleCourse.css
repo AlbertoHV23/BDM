@@ -37,11 +37,12 @@ img{
     vertical-align: middle;
 }
 
-ul{
-    list-style: none;
-}
 a{
     text-decoration: none;
+    color: var(--main-color);
+}
+a:hover{
+    color: var(--color-2);
 }
 
 .btn{
@@ -222,6 +223,7 @@ text-transform: capitalize;
 }
 
 .footer-col ul{
+    list-style: none;
     margin: 0;
 }
 
@@ -256,6 +258,10 @@ text-transform: capitalize;
 /* Content */
 .contents .accordion-item:not(:last-child){
     margin-bottom: 20px;
+}
+
+.contents a{
+    text-decoration: none;
 }
 
 .contents .accordion-header{
@@ -315,9 +321,62 @@ text-transform: capitalize;
     color: var(--black-400);
     line-height: 26px;
     margin: 0;
+    
 }
 
 
+.description-content{
+    background-color: var(--black-100);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.description-content ul{
+    padding-left: 30px;
+}
+
+/* instructor */
+.instructor{
+    background-color: #ffffff;
+    padding: 80px 0 80px;
+}
+
+.instructor .instructor-img{
+    margin: auto;
+}
+
+.instructor .instructor-img img{
+    max-width: 450px;
+    width: 100%;
+    border-radius: 50%;
+}
+.instructor .list-unstyled li{
+    font-size: 16px;
+    line-height: 26px;
+    color: #555555;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.instructor .list-unstyled li i{
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.instructor-title .name{
+    font-size: 40px;
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+
+.instructor-title .subtitle{
+    font-size: 25px;
+    color: var(--black-400);
+}
 
 @keyframes courseani01{
     0%,100%{
