@@ -3,7 +3,11 @@
 
 /*CSS*/
 :root{
+<<<<<<< Updated upstream
     --main-color:#665df5;
+=======
+    --main-color:#7857fe;
+>>>>>>> Stashed changes
     --color-2: #efb810;
     --bg-dark: #2b2c2f;
     --main-a-color-negro:var(--main-color);
@@ -373,6 +377,7 @@ ul{
 .comments-item .img-box img{
     border-radius: 50%;
     height: 100%;
+    
 }
 
 .comments-item .img-box i{
@@ -584,5 +589,6 @@ ul{
     color: rgba(255, 255, 255, 0.9); 
     font-weight: 300;
     margin:50px 0 0;
+    
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }

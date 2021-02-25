@@ -4,14 +4,17 @@
    box-sizing: border-box;
    font-family:"Poppins", sans-serif;
    scroll-behavior: smooth;
+   
 }
+
+
 
 header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
+    padding: 20px 50px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -22,15 +25,14 @@ header{
 
 header.sticky
 {
-   background: #fff;
+   background: rgba(17, 17, 17, 0.794);
    padding: 20px 100px;
    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+   
 
 }
 
-header.sticky .logo{
-color: #111;
-}
+
 header .logo{
    color: #fff;
    font-size: 24px;
@@ -65,19 +67,26 @@ header ul li a
 }
 header ul li a i{
    margin-top: 10px;
-   font-size: 20px;
+   font-size: 25px;
+   
    
 }
 
 header ul li a:hover{
    font-weight: bold;
+   color: #efb810;
+   text-decoration: none;
 }
 header.sticky ul li a:hover{
    font-weight: bold;
+   font-weight: bold;
+   color: #efb810;
+   text-decoration: none;
 }
 
+
 header.sticky  ul li a{
-   color: #111;
+   color: #fff;
 
 }
 
@@ -86,6 +95,22 @@ header.sticky  ul li a{
 }
 
 
+/* BUSCADOR */
+.buscar{
+   padding: 0 200px;
+}
+.buscar input{
+   width: 300px;
+   height: 40px;
+   border-radius: 10px;
+   background-color: transparent;
+   border: 1px solid #fff;
+   color: white;
+}
+
+.buscar .fa-search{
+   color: white;
+}
 
 /* FOOTER */
 
