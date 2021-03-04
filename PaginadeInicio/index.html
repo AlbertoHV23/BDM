@@ -13,6 +13,8 @@
     <!-- main css -->
     <link rel="stylesheet" href="/PaginadeInicio/CSS/style.css">
     <title>Change the World</title>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 </head>
 <body>
 
@@ -20,7 +22,7 @@
     <nav class="navbar navbar-expand-md fixed-top">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand" href="index.html"><img src="/PaginadeInicio/IMG/LogoB.png" alt="Logo" style="width:200px;"></a>
+            <a class="navbar-brand" href="index.html"><img src="/PaginadeInicio/IMG/LogoB.png" class="logito" alt="Logo" style="width:200px;"></a>
             
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -69,7 +71,10 @@
                 </div>
                 <div class="col-md-5 text-center">
                     <div class="home-img">
+
                         <img src="/PaginadeInicio/IMG/OnlineLearning.svg" alt="">
+
+
                     </div>
                 </div>
             </div>
@@ -166,7 +171,7 @@
                 <div class="owl-carousel comments-carousel">
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/eljefe.jfif" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>It is the best platform to learn.</p>
@@ -182,7 +187,7 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/eldonas.jfif" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>It is easy to handle and learn fast.</p>
@@ -198,7 +203,7 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/becerron.jfif" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
                         <p>The tool is very practical for teachers.</p>
@@ -214,10 +219,10 @@
                     </div>
                     <div class="comments-item">
                         <div class="img-box">
-                            <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="User Photo">
+                            <img src="/PaginadeInicio/IMG/larome.jfif" alt="User Photo">
                             <i class="fas fa-comments"></i>
                         </div>
-                        <p>yes, of course it is cool.</p>
+                        <p>UFFFF!, IAM SO EXCITED.</p>
                         <h3>Romelia Soto</h3>
                         <span>Apprentice</span>
                         <div class="rating">
@@ -311,12 +316,12 @@
             <div class="row">
                 <div class="owl-carousel team-carousel">
                     <div class="team-item">
-                        <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="Alberto Daniel Hernandez Villanueva">
+                        <img src="/PaginadeInicio/IMG/Yo.jpg" alt="Alberto Daniel Hernandez Villanueva">
                         <h3>Alberto Daniel Hernandez Villanueva</h3>
                         <span>Frontend/Backend</span>
                     </div>
                     <div class="team-item">
-                        <img src="/PaginadeInicio/IMG/avatar_opt.jpg" alt="Luis Gerardo Becerra Jiménez">
+                        <img src="/PaginadeInicio/IMG/7e68ba00-efaa-4f45-b461-eb60d7b66677.jfif" alt="Luis Gerardo Becerra Jiménez">
                         <h3>Luis Gerardo Becerra Jiménez</h3>
                         <span>Frontend/Backend</span>
                     </div>
@@ -402,5 +407,13 @@
     <script src="/PaginadeInicio/JS/scrollIt.min.js"></script>
     <!-- main js -->
     <script src="/PaginadeInicio/JS/main.js"></script>
+
+    <script>
+        // gsap.from(".logito",{    duration:2,
+        //     x:-200,
+        //     });
+
+        // gsap.from(".moradito",{duration:10, rotate:360})
+    </script>
 </body>
 </html>

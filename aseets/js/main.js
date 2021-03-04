@@ -1,5 +1,5 @@
 window.addEventListener("scroll", function () {
-  var header = document.querySelector("header");
+  var header = document.querySelector(".d-inline-flex");
   var barras = document.querySelector("#barras");
   var times = document.querySelector("#times");
   header.classList.toggle("sticky", window.scrollY > 10);

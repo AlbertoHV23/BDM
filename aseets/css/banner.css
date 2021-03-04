@@ -22,13 +22,16 @@ section{
 
 .banner h2 span{
     font-size: 1.5em;
-    font-weight: 700;
+    font-weight: 900;
     color: #efb810;
+    /* text-shadow: -1px -1px 1px #ffffff; */
+
 }
+
 .banner h3{
     font-size: 1.5em;
     color: #fff;
-    font-weight: 500;
+    font-weight: 700;
  
 
 }
@@ -36,7 +39,7 @@ section{
     margin-top: 20px;
 }
 
-.btn{
+.botn{
     position: relative;
     background: #2196f3;
     display: inline-block;
