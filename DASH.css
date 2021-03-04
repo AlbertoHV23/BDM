@@ -1,0 +1,82 @@
+/*CSS*/
+:root {
+  --main-color: #665df5;
+  --color-2: #efb810;
+  --bg-dark: #2b2c2f;
+  --main-a-color-negro: var(--main-color);
+  --negro-a-main-color: var(--bg-dark);
+  --shadow-black-100: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --shadow-black-300: 0 5px 15px rgba(0, 0, 0, 0.3);
+  --black-900: #000000;
+  --black-400: #555555;
+  --black-100: #000000;
+  --black-000: #ffffff;
+  --black-alpha-100: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  /* overflow: hidden; */
+  font-weight: 300;
+  color: var(--main-color);
+}
+.silderbar {
+  background-color: var(--main-color);
+}
+#slidebar-container {
+  /* min-height: 100vh; */
+}
+
+#slidebar-container .logo {
+  padding: 0.875rem 1.25rem;
+}
+
+#slidebar-container .menu {
+  width: 18rem;
+}
+.menu a{
+    color:white;
+}
+
+.menu a:hover {
+  text-decoration: none;
+  color: var(--main-color);
+  background: white;
+}
+
+.activate{
+    color: black;
+    background: white;
+}
+#avatar {
+  max-width: 35px;
+}
+#content {
+  /* overflow-y: auto; */
+  /* height: 100vh; */
+  padding-bottom: 5rem;
+}
+
+#boton {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+.stat {
+  border-right: 1px solid rgba(128, 128, 128, 0.561);
+}
+
+.bg-mix {
+  background: linear-gradient(180deg, #ffffff 50%, #efefef 0);
+}
+
+.bg-grey {
+  background: #efefef !important;
+}
+
+#myChart{
+  max-height: 300px;
+}
+
