@@ -21,6 +21,7 @@ body {
 }
 .silderbar {
   background-color: var(--main-color);
+  min-height: 100vh;
 }
 #slidebar-container {
   /* min-height: 100vh; */
@@ -80,3 +81,7 @@ body {
   max-height: 300px;
 }
 
+
+#MyCourse{
+  display: none;
+}
