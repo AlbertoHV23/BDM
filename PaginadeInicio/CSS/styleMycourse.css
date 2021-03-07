@@ -146,7 +146,14 @@ text-transform: capitalize;
     transform: scale(1);
 }
 
-
+.navbar-toggler-icon{
+    color: #ffffff;
+    font-size: 30px;
+    transition: all 0.5s ease;
+}
+.navbar-toggler-icon i:active{
+    transform: scale(1.2);
+}
 /* Home */
 .mycourses{
     background-color:#ffffff;
@@ -221,3 +228,12 @@ text-transform: capitalize;
     margin:50px 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.card-img-top{
+    border-radius: 10px 10px 0 0;
+}
+
+.card {
+    border-radius: 10px;
+}
+

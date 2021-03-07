@@ -33,77 +33,57 @@ $(document).ready(function () {
     });
   });
 
+  /* modal */
 
-  document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-    const dropZoneElement = inputElement.closest(".drop-zone");
+  var $modal = $('#modal');
 
-    dropZoneElement.addEventListener("click", (e) => {
-      inputElement.click();
-    });
+  var image = document.getElementById('sample_image');
 
-    inputElement.addEventListener("change", (e) => {
-      if (inputElement.files.length) {
-        updateThumbnail(dropZoneElement, inputElement.files[0]);
-      }
-    });
+  var cropper;
 
-    dropZoneElement.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      dropZoneElement.classList.add("drop-zone--over");
-    });
+  $('#upload_image').change(function (event) {
+    var files = event.target.files;
 
-    ["dragleave", "dragend"].forEach((type) => {
-      dropZoneElement.addEventListener(type, (e) => {
-        dropZoneElement.classList.remove("drop-zone--over");
-      });
-    });
+    var done = function (url) {
+      image.src = url;
+      $modal.modal('show');
+    };
 
-    dropZoneElement.addEventListener("drop", (e) => {
-      e.preventDefault();
-
-      if (e.dataTransfer.files.length) {
-        inputElement.files = e.dataTransfer.files;
-        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-      }
-
-      dropZoneElement.classList.remove("drop-zone--over");
-    });
+    if (files && files.length > 0) {
+      reader = new FileReader();
+      reader.onload = function (event) {
+        done(reader.result);
+      };
+      reader.readAsDataURL(files[0]);
+    }
   });
 
-  /**
-   * actualiza thumbnail cuando hacer el drop
-   *
-   * @param {HTMLElement} dropZoneElement
-   * @param {File} file
-   */
-  function updateThumbnail(dropZoneElement, file) {
-    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+  $modal.on('shown.bs.modal', function () {
+    cropper = new Cropper(image, {
+      aspectRatio: 1,
+      viewMode: 3,
+      preview: '.preview'
+    });
+  }).on('hidden.bs.modal', function () {
+    cropper.destroy();
+    cropper = null;
+  });
 
-    // First time - remove the prompt
-    if (dropZoneElement.querySelector(".drop-zone__text")) {
-      dropZoneElement.querySelector(".drop-zone__text").remove();
-    }
+  $('#crop').click(function () {
+    canvas = cropper.getCroppedCanvas({
+      width: 400,
+      height: 400
+    });
 
-    // First time - there is no thumbnail element, so lets create it
-    if (!thumbnailElement) {
-      thumbnailElement = document.createElement("div");
-      thumbnailElement.classList.add("drop-zone__thumb");
-      dropZoneElement.appendChild(thumbnailElement);
-    }
-
-    thumbnailElement.dataset.label = file.name;
-
-    // Show thumbnail for image files
-    if (file.type.startsWith("image/")) {
-      const reader = new FileReader();
-
-      reader.readAsDataURL(file);
-      reader.onload = () => {
-        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    canvas.toBlob(function (blob) {
+      url = URL.createObjectURL(blob);
+      var reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = function () {
+        $modal.modal('hide');
+        $('#uploaded_image').attr('src', reader.result);
       };
-    } else {
-      thumbnailElement.style.backgroundImage = null;
-    }
-  }
+    });
+  });
 
 });
