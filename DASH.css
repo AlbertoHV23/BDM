@@ -54,7 +54,7 @@ body {
 #content {
   /* overflow-y: auto; */
   /* height: 100vh; */
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 #boton {
@@ -65,13 +65,9 @@ body {
 .main-color {
   color: var(--main-color);
 }
-.stat {
-  border-right: 1px solid rgba(128, 128, 128, 0.561);
-}
+.stat { border-right: 1px solid rgba(128, 128, 128, 0.561);}
 
-.bg-mix {
-  background: linear-gradient(180deg, #ffffff 50%, #efefef 0);
-}
+.bg-mix { background: linear-gradient(180deg, #ffffff 50%, #efefef 0);}
 
 .bg-grey {
   background: #efefef !important;
@@ -82,10 +78,7 @@ body {
 }
 
 
-#MyCourse{
+#MyCourse,#contents,#Statics{
   display: none;
 }
 
-#contents{
-  display: none;
-}

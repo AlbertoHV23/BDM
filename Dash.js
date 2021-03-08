@@ -3,6 +3,8 @@ $(document).ready(function(){
         $("#DASHBOARD").show();
         $("#MyCourse").hide();
         $("#CreateCourse").hide();
+        $("#Statics").hide();
+
 
     });
 
@@ -10,6 +12,8 @@ $(document).ready(function(){
         $("#MyCourse").show();
         $("#DASHBOARD").hide();
         $("#CreateCourse").hide();
+        $("#Statics").hide();
+
 
     });
 
@@ -17,8 +21,19 @@ $(document).ready(function(){
         $("#CreateCourse").show();
         $("#MyCourse").hide();
         $("#DASHBOARD").hide();
+        $("#Statics").hide();
+
     });
 
+    $("#btn_statics").click(function(){
+        $("#Statics").show();
+        $("#CreateCourse").hide();
+        $("#MyCourse").hide();
+        $("#DASHBOARD").hide();
+    });
+
+
+    
     $("#btn_mycourse_Sales").click(function(){
       
         $(".sales").toggle();
