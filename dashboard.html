@@ -7,6 +7,7 @@
     <title>DASHBOARD</title>
     <!-- CSS -->
     <link rel="stylesheet" href="DASH.css">
+    <link rel="stylesheet" href="PaginadeInicio/CSS/styleCourse.css">
 
   
      <!-- fontawesome icons -->
@@ -140,7 +141,7 @@
                                    
                                     <div class="card-body" id="grafico">
                                         <h6 class="font-weight-bold main-color ">Top cursos</h6>
-                                        <canvas id="myChart"></canvas>
+                                        <canvas id="VentasCursos"></canvas>
                                     </div>
 
                                 </div>
@@ -184,9 +185,9 @@
                 <section class="mycourses" id="MyCourse">
                     <div class="container">
                         <div class="row justify-content-center">
-                            <div class="col my-2">
-                                <div class="section-title">
-                                    <h2 class="main-color font-weight-bold">My Courses</h2>
+                            <div class="col-lg-12  main-color">
+                                <div class="section-title ">
+                                    <h1 class="font-weight-bold main-color text-center">My Courses</h1>
                                 </div>
                             </div>
                         </div>
@@ -258,6 +259,59 @@
                     </div>
                 </section>
 
+                <section class="CreateCourse" id="CreateCourse">
+                    <div class="container">
+                        <div class="row ">
+                            
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <section class="Statics" id="Statics">
+                    <div class="container">
+                        <div class="row ">
+                            <div class="col-lg-12 my-2">
+                                <h1 class="font-weight-bold main-color ">General statistics</h1>
+                            </div>
+                            
+                        </div>
+
+                        <div class="row my-4">
+                            <div class="col-lg-6 mb-3">
+                                <h4 class="my-3 text-muted">Earnings from all my courses.</h4>
+                                <canvas id="DineroVentas" class="my-3"></canvas>
+                            </div>
+
+                            <div class="col-lg-6 mb-3 text-muted">
+                                <h4 class="my-3">Course sales</h4>
+                                <canvas id="VentasCurso" class="my-3"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4 my-3  ">
+                                <h6 class="text-muted text-center ">TOTAL COURSES:</h6>
+                                <h1 class="font-weight-bold main-color text-center ">10</h1>
+                            </div>
+                            
+                            <div class="col-lg-4 my-3  ">
+                                <h6 class="text-muted text-center ">TOTAL STUDENTS:</h6>
+                                <h1 class="font-weight-bold main-color text-center ">100</h1>
+                            </div>
+
+                            <div class="col-lg-4 my-3  ">
+                                <h6 class="text-muted text-center ">TOTAL EARNINGS:</h6>
+                                <h1 class="font-weight-bold main-color text-center ">$200,000.00</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+     
+
                
                 
               </div>
@@ -268,7 +322,7 @@
 
 
    <script>
-       var ctx = document.getElementById('myChart').getContext('2d');
+       var ctx = document.getElementById('VentasCursos').getContext('2d');
         var chart = new Chart(ctx, {
     // The type of chart we want to create
     type: 'bar',
@@ -277,7 +331,7 @@
     data: {
         labels: ['HTML', 'CSS', 'PHP', 'JQUERY', 'MYSQK'],
         datasets: [{
-            label: 'TOP COURSES',
+            label: 'SALES',
             backgroundColor: '#665df5',
             maxBardThickness:10,
             borderColor: 'rgb(255, 99, 132)',
@@ -289,6 +343,58 @@
     options: {}
 });
    </script>
+
+<script>
+    var ctx = document.getElementById('DineroVentas').getContext('2d');
+     var chart = new Chart(ctx, {
+ // The type of chart we want to create
+ type: 'pie',
+
+ // The data for our dataset
+ data: {
+     labels: ['HTML', 'CSS', 'PHP', 'JQUERY', 'MYSQK'],
+     datasets: [{
+         label: 'EARNINGS',
+         backgroundColor:  ['rgb(13, 4, 255)',
+         'rgb(233, 255, 4)',
+         'rgb(255, 122, 12)',
+         'rgb(255, 99, 132)'],
+         maxBardThickness:10,
+         borderColor: 'rgb(255, 99, 132)',
+         data: [20, 10, 50, 20, 20,]
+     }]
+ },
+
+ // Configuration options go here
+ options: {}
+});
+</script>
+
+<script>
+    var ctx = document.getElementById('VentasCurso').getContext('2d');
+     var chart = new Chart(ctx, {
+ // The type of chart we want to create
+ type: 'bar',
+
+ // The data for our dataset
+ data: {
+     labels: ['HTML', 'CSS', 'PHP', 'JQUERY', 'MYSQK'],
+     datasets: [{
+         label: 'Course sales',
+         backgroundColor:  ['rgb(13, 4, 255)',
+         'rgb(233, 255, 4)',
+         'rgb(255, 122, 12)',
+         'rgb(255, 99, 132)'],
+         maxBardThickness:10,
+         borderColor: 'rgb(255, 99, 132)',
+         data: [20, 10, 50, 20, 20,]
+     }]
+ },
+
+ // Configuration options go here
+ options: {}
+});
+</script>
      <!-- js -->
      <script src="Dash.js"></script>
 </body>
