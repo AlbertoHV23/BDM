@@ -31,7 +31,7 @@ $(document).ready(function(){
 
     });
 
-    $("#btn_statics").click(function(){
+    $("#btn_statistics").click(function(){
         $("#Statics").show();
         $("#CreateCourse").hide();
         $("#MyCourse").hide();
