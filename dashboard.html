@@ -8,16 +8,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="DASH.css">
     <link rel="stylesheet" href="PaginadeInicio/CSS/styleCourse.css">
-
+    <!-- <link rel="stylesheet" href="PaginadeInicio/CSS/styleUsuario.css"> -->
+    <link rel="stylesheet" href="PaginadeInicio/CSS/">
   
      <!-- fontawesome icons -->
      <link rel="stylesheet" href="/PaginadeInicio/CSS/font-awesome.css">
      <!-- bootstrap css -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-   
-     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     
 
       <!-- JQUERY -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -26,6 +24,14 @@
 
      <!-- CHARTS  -->
      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+    
+    <!-- ALERTAS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="sweetalert2.min.js"></script>
+
+     <!-- photo css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.css">
+    
     </head>
 <body>
     <div class="d-flex">
@@ -34,11 +40,14 @@
                 <img src="aseets/img/LogoB.png" alt="">
             </div>
             <div class="menu">
-                <a href="#" id="btn_dashboard" class="d-block p-3  font-weight-bold  "><i class="fa fa-table mr-2" aria-hidden="true"></i>Dashboard</a>
-                <a href="#" id="btn_mycourse" class="d-block p-3  font-weight-bold "><i class="fa fa-certificate mr-2" aria-hidden="true"></i>My Courses</a>
-                <a href="#" id="btn_create" class="d-block p-3  font-weight-bold "><i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>Create a course</a>
-                <a href="#" id="btn_statics" class="d-block p-3  font-weight-bold"><ion-icon name="bar-chart-outline" class="mr-2"></ion-icon></i>Statistics</a>
-                <a href="#" id="" class="d-block p-3  font-weight-bold"><i class="fa fa-cog mr-2" aria-hidden="true"></i>Settings</a>
+                <a href="#" id="btn_dashboard" class="d-block p-3  font-weight-bold  "><i class="fas fa-table mr-2" aria-hidden="true"></i>Dashboard</a>
+                <a href="#" id="btn_mycourse" class="d-block p-3  font-weight-bold "><i class="fas fa-certificate mr-2" aria-hidden="true"></i>My Courses</a>
+                <a href="#" id="btn_create" class="d-block p-3  font-weight-bold "><i class="fas fa-plus-circle mr-2" aria-hidden="true"></i>Create a course</a>
+                <a href="#" id="btn_profile" class="d-block p-3  font-weight-bold "><i class="fas fa-chart-bar mr-2" aria-hidden="true"></i>Profile</a>
+                <a href="#" id="btn_profile" class="d-block p-3  font-weight-bold "><i class="fas fa-user mr-2" aria-hidden="true"></i>Profile</a>
+
+                
+                <!-- <a href="#" id="" class="d-block p-3  font-weight-bold"><i class="fa fa-cog mr-2" aria-hidden="true"></i>Settings</a> -->
 
             </div>
         </div>
@@ -314,7 +323,120 @@
 
                 </section>
 
-     
+                   <!-- Fomrs Inicio -->
+    <section class="forms my-5" id="TecaherProfile">
+        <div class="container">
+            <div class="row">
+                <div class="tab-content w-50 mx-auto" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <div class="container">
+                            <form action="">
+                                <div class="form-group text-center">
+                                    <div class="select-photo w-50 mx-auto">
+                                        <form action="" method="post">
+                                            <label for="upload_image">
+                                                <img src="/PaginadeInicio/IMG/sinFoto.png" id="uploaded_image"
+                                                    class="img-responsive img-circle" />
+                                                <div class="overlay">
+                                                    <div class="text">Click to Change Profile Image</div>
+                                                </div>
+                                                <input type="file" name="image" class="image" id="upload_image"
+                                                    style="display:none" />
+                                            </label>
+                                        </form>
+                                    </div>
+
+                                    <small class="form-text text-muted main-color">This will be seen every time you post something
+                                        or comment like chats.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputUsername">Username: <strong>Geraxmoxitos</strong></label>
+                                    <input type="text" class="form-control" id="inputUsername"
+                                        aria-describedby="usernameHelp" placeholder="Write new username">
+                                    <small id="usernameHelp" class="form-text text-muted main-color">This will be seen every time
+                                        you post something or comment like chats.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputName">Name: <strong>Luis Gerardo Becerra Jiménez</strong></label>
+                                    <input type="text" class="form-control" id="inputName" aria-describedby="nameHelp"
+                                        placeholder="Write new name">
+                                    <small id="nameHelp" class="form-text text-muted">This will be used once you finish
+                                        the courses for your certificates.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputAbout">About me</label>
+                                    <input type="text" class="form-control" id="inputAbout" aria-describedby="aboutHelp"
+                                        placeholder="Write something about yourself, skills, tastes ...">
+                                    <small id="aboutHelp" class="form-text text-muted">This is just to know more about
+                                        you.</small>
+                                </div>
+                                <div class="botones">
+                                    <button type="button" class="btn btn-profile">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade justify-content-center" id="v-pills-password" role="tabpanel"
+                        aria-labelledby="v-pills-password-tab">
+                        <div class="container">
+                            <form action="">
+                                <div class="form-group">
+                                    <label for="inputEmail">Email: <strong>gera@gmail.com</strong></label>
+                                    <input type="email" class="form-control" id="inputEmail"
+                                        aria-describedby="emailHelp" placeholder="Enter email">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                        anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="InputPassword">Password:</label>
+                                    <input type="password" class="form-control mb-3" id="InputPassword"
+                                        placeholder="Password">
+                                    <input type="password" class="form-control mb-3" id="InputRewritePassword"
+                                        placeholder="Rewrite Password">
+                                </div>
+                                <div class="botones">
+                                    <button type="button" class="btn btn-password">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Fomrs Final -->
+
+    <!-- ModalPhoto Incio -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crop Image Before Upload</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img src="" id="sample_image" />
+                            </div>
+                            <div class="col-md-4 my-auto">
+                                <div class="preview mx-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="crop" class="btn btn-primary">Crop</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ModalPhoto Final -->
 
                
                 
@@ -401,5 +523,11 @@
 </script>
      <!-- js -->
      <script src="Dash.js"></script>
-</body>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+   
+    <script src="PaginadeInicio/JS/mainUsuario.js"></script>
+    <!-- photo js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.11/cropper.min.js"></script>
+
 </html>

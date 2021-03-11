@@ -4,6 +4,8 @@ $(document).ready(function(){
         $("#MyCourse").hide();
         $("#CreateCourse").hide();
         $("#Statics").hide();
+        $("#TecaherProfile").hide();
+
 
 
     });
@@ -13,6 +15,8 @@ $(document).ready(function(){
         $("#DASHBOARD").hide();
         $("#CreateCourse").hide();
         $("#Statics").hide();
+        $("#TecaherProfile").hide();
+
 
 
     });
@@ -22,11 +26,23 @@ $(document).ready(function(){
         $("#MyCourse").hide();
         $("#DASHBOARD").hide();
         $("#Statics").hide();
+        $("#TecaherProfile").hide();
+
 
     });
 
     $("#btn_statics").click(function(){
         $("#Statics").show();
+        $("#CreateCourse").hide();
+        $("#MyCourse").hide();
+        $("#DASHBOARD").hide();
+        $("#TecaherProfile").hide();
+
+    });
+
+    $("#btn_profile").click(function(){
+        $("#TecaherProfile").show();
+        $("#Statics").hide();
         $("#CreateCourse").hide();
         $("#MyCourse").hide();
         $("#DASHBOARD").hide();
