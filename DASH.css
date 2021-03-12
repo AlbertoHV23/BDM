@@ -95,7 +95,7 @@ body {
   display: none;
 }
 
-.btn {
+section .btn {
   background-color: #ffffff;
   padding: 12px 30px;
   border: none;
@@ -108,11 +108,11 @@ body {
   font-weight: 500;
 }
 
-.btn:focus {
+section .btn:focus {
   box-shadow: var(--shadow-black-300);
 }
 
-.btn:hover {
+section .btn:hover {
   color: #ffffff;
   background-color: var(--main-color);
 }
@@ -123,16 +123,16 @@ body {
   position: relative;
 }
 
-img {
+section img {
   display: block;
   max-width: 100%;
 }
 
-.img-circle {
+section .img-circle {
   border-radius: 50%;
 }
 
-.preview {
+section .preview {
   overflow: hidden;
   width: 260px;
   height: 260px;
@@ -140,7 +140,7 @@ img {
   border-radius: 50%;
 }
 
-.modal-lg {
+section .modal-lg {
   max-width: 1000px !important;
 }
 
