@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $(".btn_add_video").click(function (e) { 
+        $("#AgregarCapitulo").toggle();
+    });
+
     $("#btn_dashboard").click(function () {
         $("#DASHBOARD").show();
         $("#MyCourse").hide();

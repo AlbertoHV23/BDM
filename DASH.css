@@ -91,7 +91,7 @@ body {
 #MyCourse,
 #contents,
 #Statics,
-#teacherProfile,#CreateCourse {
+#teacherProfile,#CreateCourse ,#AgregarCapitulo{
   display: none;
 }
 
