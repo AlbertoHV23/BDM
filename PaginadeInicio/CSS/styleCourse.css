@@ -418,3 +418,24 @@ text-transform: capitalize;
         transform: translateY(-10px);
     }
 }
+
+.btn{
+    background-color: #ffffff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    color: var(--main-color);
+    font-size: 16px;
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    box-shadow: var(--shadow-black-300);
+    font-weight: 500;
+}
+
+.btn:focus{
+    box-shadow: var(--shadow-black-300);
+}
+.btn:hover{
+    color: #ffffff;
+    background-color: var(--main-color);
+}

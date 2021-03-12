@@ -19,9 +19,9 @@
 
     <title>DASHBOARD</title>
 
-     <!-- CHARTS  -->
-     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
-     integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
+    <!-- CHARTS  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha256-t9UJPrESBeG2ojKTIcFLPGF7nHi2vEc7f5A2KpH/UBU=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -285,11 +285,170 @@
 
                 <section class="CreateCourse" id="CreateCourse">
                     <div class="container">
-                        <div class="row ">
+                        <div class="row">
+                            <div class="container my-5 mx-5">
+                                <form action="">
+                                    <div class="form-group text-center">
+                                        <div class="select-photo w-50 mx-auto">
+                                            <form action="" method="post">
+                                                <label for="upload_image">
+                                                    <img src="/PaginadeInicio/IMG/sinFoto.png" id="uploaded_image"
+                                                        class="img-responsive img-circle"/>
+                                                    <div class="overlay">
+                                                        <div class="text">Click to Change Course Image</div>
+                                                    </div>
+                                                    <input type="file" name="image" class="image" id="upload_image"
+                                                        style="display:none" />
+                                                </label>
+                                            </form>
+                                        </div>
 
+                                        <small class="form-text text-muted">Make sure it is an image in PNG
+                                            format</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputTitle">Example:
+                                            <strong>Complete course on Multimedia Database</strong></label>
+                                        <input type="text" class="form-control" id="inputTitle"
+                                            aria-describedby="TitleHelp" placeholder="Write new title">
+                                        <small id="TitleHelp" class="form-text text-muted">This text will be seen on the
+                                            course page.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescriptionS">Short description:</label>
+                                        <textarea name="" id="" class="w-100" style="min-height: 100px;"
+                                            placeholder="Write something short about your course"></textarea>
+                                        <small id="inputDescriptionSHelp" class="form-text text-muted">Be as brief as
+                                            possible but understand what your course is about.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPrice">Price:</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">$</span>
+                                            </div>
+                                            <input type="text" class="form-control"
+                                                aria-label="Amount (to the nearest dollar)">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text">.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAbout">Course Content:</label>
+                                        <div id="accordion">
+                                            <div class="card">
+                                                <div class="card-header" id="headingOne">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link" data-toggle="collapse"
+                                                            data-target="#collapseOne" aria-expanded="true"
+                                                            aria-controls="collapseOne">
+                                                            Introduction
+                                                        </button>
+                                                    </h5>
+                                                </div>
+
+                                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                        non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                        nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                                                        put a bird on it squid single-origin coffee nulla assumenda
+                                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                                        wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                                        excepteur butcher vice lomo. Leggings occaecat craft beer
+                                                        farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                        haven't heard of them accusamus labore sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingTwo">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseTwo" aria-expanded="false"
+                                                            aria-controls="collapseTwo">
+                                                            Basic
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                        non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                        nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                                                        put a bird on it squid single-origin coffee nulla assumenda
+                                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                                        wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                                        excepteur butcher vice lomo. Leggings occaecat craft beer
+                                                        farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                        haven't heard of them accusamus labore sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingThree">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseThree" aria-expanded="false"
+                                                            aria-controls="collapseThree">
+                                                            Medium
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <h4>Add the videos that will be free for the course, those
+                                                            who talk about it and what tools they will use.</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-header" id="headingFour">
+                                                    <h5 class="mb-0">
+                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                            data-target="#collapseFour" aria-expanded="false"
+                                                            aria-controls="collapseFour">
+                                                            Advanced
+                                                        </button>
+                                                    </h5>
+                                                </div>
+                                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life
+                                                        accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                        non cupidatat skateboard dolor brunch. Food truck quinoa
+                                                        nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua
+                                                        put a bird on it squid single-origin coffee nulla assumenda
+                                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore
+                                                        wes anderson cred nesciunt sapiente ea proident. Ad vegan
+                                                        excepteur butcher vice lomo. Leggings occaecat craft beer
+                                                        farm-to-table, raw denim aesthetic synth nesciunt you probably
+                                                        haven't heard of them accusamus labore sustainable VHS.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputDescriptionL">Long description:</label>
+                                        <textarea name="" id="" class="w-100" style="min-height: 200px;"
+                                            placeholder="Write something short about your course"></textarea>
+                                        <small id="inputDescriptionLHelp" class="form-text text-muted">It includes everything that users of this course should know, requirements, about, etc.</small>
+                                    </div>
+                                    <div class="botones">
+                                        <button type="button" class="btn btn-profile">Save</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-
                 </section>
 
                 <section class="Statics" id="Statics">
@@ -330,13 +489,116 @@
 
                 </section>
 
-                <section id="TecaherProfile">
-                    
+                <!-- Fomrs Inicio -->
+                <section class="forms" id="teacherProfile">
+                    <div class="container">
+                        <div class="row">
+                            <div class="container my-5 mx-5">
+                                <form action="">
+                                    <div class="form-group text-center">
+                                        <div class="select-photo w-50 mx-auto">
+                                            <form action="" method="post">
+                                                <label for="upload_image">
+                                                    <img src="/PaginadeInicio/IMG/sinFoto.png" id="uploaded_image"
+                                                        class="img-responsive img-circle" />
+                                                    <div class="overlay">
+                                                        <div class="text">Click to Change Profile Image</div>
+                                                    </div>
+                                                    <input type="file" name="image" class="image" id="upload_image"
+                                                        style="display:none" />
+                                                </label>
+                                            </form>
+                                        </div>
+
+                                        <small class="form-text text-muted">This will be seen every time you
+                                            post something
+                                            or comment like chats.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputUsername">Username:
+                                            <strong>Geraxmoxitos</strong></label>
+                                        <input type="text" class="form-control" id="inputUsername"
+                                            aria-describedby="usernameHelp" placeholder="Write new username">
+                                        <small id="usernameHelp" class="form-text text-muted">This will be seen
+                                            every time
+                                            you post something or comment like chats.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Name: <strong>Luis Gerardo Becerra
+                                                Jiménez</strong></label>
+                                        <input type="text" class="form-control" id="inputName"
+                                            aria-describedby="nameHelp" placeholder="Write new name">
+                                        <small id="nameHelp" class="form-text text-muted">This will be used once
+                                            you finish
+                                            the courses for your certificates.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputAbout">About me</label>
+                                        <input type="text" class="form-control" id="inputAbout"
+                                            aria-describedby="aboutHelp"
+                                            placeholder="Write something about yourself, skills, tastes ...">
+                                        <small id="aboutHelp" class="form-text text-muted">This is just to know
+                                            more about
+                                            you.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email: <strong>gera@gmail.com</strong></label>
+                                        <input type="email" class="form-control" id="inputEmail"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share
+                                            your email with
+                                            anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="InputPassword">Password:</label>
+                                        <input type="password" class="form-control mb-3" id="InputPassword"
+                                            placeholder="Password">
+                                        <input type="password" class="form-control mb-3" id="InputRewritePassword"
+                                            placeholder="Rewrite Password">
+                                    </div>
+                                    <div class="botones">
+                                        <button type="button" class="btn btn-profile">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                
+                <!-- Fomrs Final -->
             </div>
         </div>
     </div>
+
+    <!-- ModalPhoto Incio -->
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Crop Image Before Upload</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img src="" id="sample_image" />
+                            </div>
+                            <div class="col-md-4 my-auto">
+                                <div class="preview mx-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="crop" class="btn btn-primary">Crop</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ModalPhoto Final -->
 
     <script>
         var ctx = document.getElementById('VentasCursos').getContext('2d');
@@ -417,7 +679,7 @@
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-   
+
     <!-- ALERTAS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="sweetalert2.min.js"></script>
