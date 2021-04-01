@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS Courses(
 id_course INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the course.',
 fk_school INT UNSIGNED NOT NULL COMMENT'This field represents the school to which the course is linked.',
 fk_categorie INT UNSIGNED NOT NULL COMMENT'This field represents the category to which the course is linked.',
+fk_user INT UNSIGNED NOT NULL COMMENT'This field represents who created the course.',
 logo BLOB NOT NULL COMMENT'This field represents the course logo.',
 title VARCHAR(255) NOT NULL UNIQUE COMMENT'This field represents the title of the course.',
 average_rating DECIMAL(1,1) NULL COMMENT'This field represents the average rating for the course.',
@@ -41,7 +42,8 @@ number_comments INT NULL COMMENT'This field represents the number of comments fo
 cost DECIMAL NOT NULL COMMENT'This field represents how much the course costs.',
 PRIMARY KEY(id_course),
 FOREIGN KEY(fk_school) REFERENCES schools(id_school),
-FOREIGN KEY(fk_categorie) REFERENCES categories(id_categorie)) COMMENT'This table represents the data of all the courses that exist on the website.' ;
+FOREIGN KEY(fk_categorie) REFERENCES categories(id_categorie),
+FOREIGN KEY(fk_user) REFERENCES users(id_user)) COMMENT'This table represents the data of all the courses that exist on the website.' ;
 
 CREATE TABLE IF NOT EXISTS Videos(
 id_video INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the video.',
