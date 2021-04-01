@@ -73,9 +73,9 @@ PRIMARY KEY(id_file),
 FOREIGN KEY(fk_video) REFERENCES videos(id_video)) COMMENT'This table represents the files shared by the teacher in the video.';
 
 CREATE TABLE IF NOT EXISTS Links(
-id_file INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'',
-fk_video INT UNSIGNED NOT NULL COMMENT'',
-link VARCHAR(255) NOT NULL,
+id_file INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the shared link.',
+fk_video INT UNSIGNED NOT NULL COMMENT'This field represents which video the link belongs to.',
+link VARCHAR(255) NOT NULL COMMENT'This field represents the shared link.',
 PRIMARY KEY(id_file),
 FOREIGN KEY(fk_video) REFERENCES videos(id_video)) COMMENT'This table represents the links shared by the teacher in the video.';
 
