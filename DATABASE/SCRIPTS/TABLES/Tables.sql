@@ -62,6 +62,7 @@ content 			LONGBLOB 			NOT NULL 			COMMENT'This field represents the video.',
 viewed 				BOOLEAN 			NOT NULL DEFAULT 0 	COMMENT'This field represents whether the video has been viewed or not.',
 level_				int					NOT NULL			COMMENT'This field represents  level of the coruse (basic,expert, etc).',
 PRIMARY KEY(id_video),
+<<<<<<< HEAD
 FOREIGN KEY(fk_course) REFERENCES tbl_Courses(id_course))COMMENT'This table represents all the videos of the courses on the website.';
 
 CREATE TABLE IF NOT EXISTS tbl_Resources(
@@ -80,6 +81,40 @@ fk_course 					INT UNSIGNED 			NOT NULL 			COMMENT'This field represents the cou
 fk_sender 					INT UNSIGNED 			NOT NULL 			COMMENT'This field represents who made the comment in the course.',
 message 					TEXT 					NOT NULL 			COMMENT'This field represents the content of the comment in the course.',
 comment_date				DATE 					NOT NULL			COMMENT'This field represents the date of comments',				
+=======
+FOREIGN KEY(fk_course) REFERENCES courses(id_course))COMMENT'This table represents all the videos of the courses on the website.';
+
+CREATE TABLE IF NOT EXISTS Notes(
+id_note INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the video notes.',
+fk_video INT UNSIGNED NOT NULL COMMENT'This field represents which video the note is from.',
+fk_user INT UNSIGNED NOT NULL COMMENT'This field represents by whom the note was written.',
+note TEXT NOT NULL COMMENT'This field represents the content of the note.',
+PRIMARY KEY(id_note),
+FOREIGN KEY(fk_video) REFERENCES videos(id_video),
+FOREIGN KEY(fk_user) REFERENCES users(id_user)) COMMENT'This table represents all the notes made by users in the video.';
+
+CREATE TABLE IF NOT EXISTS Files(
+id_file INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the video file.',
+fk_video INT UNSIGNED NOT NULL COMMENT'This field represents which video the file is from.',
+name_file VARCHAR(255) NOT NULL COMMENT'This field represents the name of the file.',
+content BLOB NOT NULL COMMENT'This field represents the content of the file.',
+PRIMARY KEY(id_file),
+FOREIGN KEY(fk_video) REFERENCES videos(id_video)) COMMENT'This table represents the files shared by the teacher in the video.';
+
+CREATE TABLE IF NOT EXISTS Links(
+id_file INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the shared link.',
+fk_video INT UNSIGNED NOT NULL COMMENT'This field represents which video the link belongs to.',
+link VARCHAR(255) NOT NULL COMMENT'This field represents the shared link.',
+PRIMARY KEY(id_file),
+FOREIGN KEY(fk_video) REFERENCES videos(id_video)) COMMENT'This table represents the links shared by the teacher in the video.';
+
+CREATE TABLE IF NOT EXISTS Comments_courses(
+id_comment_course INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT'This field represents the identifier of the course comment.',
+fk_course INT UNSIGNED NOT NULL COMMENT'This field represents which course the comment belongs to.',
+fk_sender INT UNSIGNED NOT NULL COMMENT'This field represents who made the comment in the course.',
+fk_addressee INT UNSIGNED NOT NULL COMMENT'This field represents who the comment was answered to on the course.',
+message TEXT NOT NULL COMMENT'This field represents the content of the comment in the course.',
+>>>>>>> 7f039c5494a871ab608f9fa687baa812d39348f9
 PRIMARY KEY(id_comment_course),
 FOREIGN KEY(fk_course) REFERENCES tbl_Courses(id_course),
 FOREIGN KEY(fk_sender) REFERENCES tbl_Users(id_user)
