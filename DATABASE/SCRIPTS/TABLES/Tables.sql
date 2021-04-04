@@ -87,7 +87,7 @@ PRIMARY KEY(id_comment_video),
 FOREIGN KEY(fk_video) REFERENCES tbl_Videos(id_video),
 FOREIGN KEY(fk_sender) REFERENCES tbl_Users(id_user)) COMMENT'This table represents the data for the video comments.';
 
-CREATE TABLE IF NOT EXISTS Comments_comments_course (
+CREATE TABLE IF NOT EXISTS tbl_Comments_comments_course (
 id_comment_coments_course		INT UNSIGNED 			AUTO_INCREMENT		COMMENT'This field represents the identifier of the course comment.',
 fk_comment 						INT UNSIGNED 			NOT NULL 			COMMENT'This field represents the parent comments.',
 fk_sender 					 	INT UNSIGNED 			NOT NULL 			COMMENT'This field represents who made the comment in the comments.',
@@ -96,7 +96,7 @@ comment_date				    DATE 					NOT NULL			COMMENT'This field represents the date 
 PRIMARY KEY(id_comment_coments_course),
 FOREIGN KEY(fk_comment) REFERENCES tbl_Comments_Courses(id_comment_course)) COMMENT'This table represents the data from comments to comments for the course.';
 
-CREATE TABLE IF NOT EXISTS Comments_comments_video (
+CREATE TABLE IF NOT EXISTS tbl_Comments_comments_video (
 id_comment_coments_video		INT UNSIGNED		AUTO_INCREMENT		COMMENT'This field represents the identifier of the course comment.',
 fk_comment 					    INT UNSIGNED 		NOT NULL 			COMMENT'This field represents the parent comments.',
 fk_sender 					    INT UNSIGNED 		NOT NULL 			COMMENT'This field represents who made the comment in the comments.',
@@ -105,7 +105,7 @@ comment_date				    DATE 				NOT NULL			COMMENT'This field represents the date o
 PRIMARY KEY(id_comment_coments_video),
 FOREIGN KEY(fk_comment) REFERENCES tbl_Comments_videos(id_comment_video)) COMMENT'This table represents the data from comments to video comments.';
 
-CREATE TABLE IF NOT EXISTS Messages(
+CREATE TABLE IF NOT EXISTS tbl_Messages(
 id_message		INT UNSIGNED		AUTO_INCREMENT		COMMENT'This field represents the identifier of the message.',
 fk_sender 		INT UNSIGNED		NOT NULL			COMMENT'This field represents who sent the message.',
 fk_addressee 	INT UNSIGNED		NOT NULL			COMMENT'This field represents who receives the message.',
@@ -115,7 +115,7 @@ PRIMARY KEY(id_message),
 FOREIGN KEY(fk_sender) REFERENCES tbl_Users(id_user),
 FOREIGN KEY(fk_addressee) REFERENCES tbl_Users(id_user))  COMMENT'This table represents the messages made by users in private';
 
-CREATE TABLE IF NOT EXISTS Ratings(
+CREATE TABLE IF NOT EXISTS tbl_Ratings(
 id_rating		INT UNSIGNED		AUTO_INCREMENT		COMMENT'This field represents the grade identifier in the course.',
 fk_user 		INT UNSIGNED 		NOT NULL 			COMMENT'This field represents who graded the course.',
 fk_course 		INT UNSIGNED 		NOT NULL 			COMMENT'This field represents which course was graded.',
@@ -124,7 +124,7 @@ PRIMARY KEY(id_rating),
 FOREIGN KEY(fk_user) REFERENCES tbl_Users(id_user),
 FOREIGN KEY(fk_course) REFERENCES tbl_Courses(id_course)) COMMENT'This table represents the grade of each user to the course.';
 
-CREATE TABLE IF NOT EXISTS Sales(
+CREATE TABLE IF NOT EXISTS tbl_Sales(
 id_sale     INT				AUTO_INCREMENT    COMMENT'This field represents the identifier of the sale.',
 fk_seller   INT UNSIGNED    NOT NULL          COMMENT'This field represents the seller.',
 fk_course   INT UNSIGNED    NOT NULL          COMMENT'This field represents the product that was sold.',
@@ -132,7 +132,7 @@ PRIMARY KEY(id_sale),
 FOREIGN KEY(fk_seller) REFERENCES tbl_Users(id_user),
 FOREIGN KEY(fk_course) REFERENCES tbl_Courses(id_course)) COMMENT'This table represents the sales of each user.';
 
-CREATE TABLE IF NOT EXISTS Purchases(
+CREATE TABLE IF NOT EXISTS tbl_Purchases(
 id_purchase		INT UNSIGNED		AUTO_INCREMENT		COMMENT'This field represents the identifier of the sale.',
 fk_buyer 		INT UNSIGNED 		NOT NULL 			COMMENT'This field represents the buyer.',
 fk_course 		INT UNSIGNED 		NOT NULL 			COMMENT'This field represents the product that was purchased.',
