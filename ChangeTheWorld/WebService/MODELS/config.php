@@ -1,19 +1,17 @@
 <?php
-function connect() {
-    $databasehost = "localhost";
-    $databasename = "midb";
-    $databaseuser = "root";
-    $databasepass = "";
+class Conection{
+    private $con;
+    private $dataBaseHost = "localhost";
+    private $dataBaseName = "changetheworld";
+    private $dataBaseUser = "root";
+    private $dataBasePass = "";
 
-    $mysqli = new mysqli($databasehost, $databaseuser, $databasepass, $databasename);
-    if ($mysqli->connect_errno) {
-        echo "Problema con la conexion a la base de datos";
+    public function __construct()
+    {
+        $this->con = new mysqli($this->dataBaseHost,$this->dataBaseUser,$this->dataBasePass,$this->dataBaseName);
+        if ($$this->con->connect_errno) {
+            echo "Failed to connect to database.";
+        }
     }
-    return $mysqli;
 }
-
-function disconnect() {
-
-}
-
 ?>

@@ -12,19 +12,10 @@ class tbl_Users
         private $password_user;
         private $registered_date;
         private $date_of_last_change;
-        public function __construct(
-            $id_user,
-            $role_user,
-            $photo,
-            $username,
-            $name_user,
-            $last_name,
-            $description_user,
-            $email,
-            $password_user,
-            $registered_date,
-            $date_of_last_change
-        ) {
+        public function __construct($id_user,$role_user,$photo,$username,$name_user,$last_name,$description_user,$email,$password_user,
+        $registered_date,$date_of_last_change) {
         }
+
+        
     }
 ?>
