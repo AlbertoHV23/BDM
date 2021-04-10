@@ -58,6 +58,7 @@
         </form>
 
         <form action="userController.php" method="POST" class="sign-up-form">
+
           <h2 class="title">Sing in</h2>
           <label for="role">Type:</label>
           <select name="role" id="role" form="sign-in-form" class="selector">
@@ -66,20 +67,26 @@
           </select>
           <div class="input-field" id="border_name">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Name" id="sign_name" name="name"/>
+            <input type="text" placeholder="Name:" id="sign_name" />
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" id="sign_username" name="username" />
+            <input type="text" placeholder="Username:" id="sign_username" />
           </div>
           <div class="input-field" id="border_mail">
             <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email" id="sign_email" name="email"/>
+            <input type="text" placeholder="Email:" id="sign_email" />
           </div>
           <div class="input-field" id="border_pass">
             <i class="fas fa-lock"></i>
-            <input type="text" placeholder="Password" id="sign_password"
-              title="Minimum 8 characters,Mayus, Numbers and  special digit " name="password"/>
+            <input type="text" placeholder="Password:" id="sign_password"
+              title="Minimum 8 characters,Mayus, Numbers and  special digit " />
+
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="date" placeholder="Date:" id="sign_date" />
+
           </div>
           <input type="button" class="btn" value="Sing in" id="btn_signin" />
           <p class="social-text">Sing in with a social network.</p>
@@ -132,11 +139,9 @@
 
   <script src="JS/login.js"></script>
   <script src="JS/validaciones.js"></script>
-
   <script type="text/javascript">
   $(document).ready(function (){
   });
-  
   </script>
 </body>
 

@@ -4,7 +4,7 @@ require('../Models/conection.php');
 
 $con = new Conection();
 
-class UserController extends tbl_Users{
+class UsuerController extends tbl_Users{
 
     public function LoginView()
     {
@@ -13,7 +13,7 @@ class UserController extends tbl_Users{
 }
 
 if(isset($_GET['action']) && $_GET['action']=='login'){
-    $controllerInstance = new UserController();
+    $controllerInstance = new UsuerController();
     $controllerInstanc->LoginView();
 }
 ?>
