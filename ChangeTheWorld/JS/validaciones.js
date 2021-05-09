@@ -1,4 +1,9 @@
 $(document).ready(function(){
+
+    $(".sign-up-form").submit(function(e){
+            e.preventDefault();
+    });
+
     // LOG IN
     $("#btn_login").click(function(){
         var _username = $("#log_username").val();
@@ -12,7 +17,6 @@ $(document).ready(function(){
                 confirmButtonText: 'Retry'
               })
         }
-
         else{
             Swal.fire({
                 title: 'It´s ok!',
@@ -21,21 +25,19 @@ $(document).ready(function(){
                 confirmButtonText: 'Retry'
               })  
         }
-
-      
-       
     });
 
 
     // SING IN 
     $("#btn_signin").click(function(){
-        var _name = $("#sign_name").val();
+        var _role = $("#sign_type").val();
         var _username = $("#sign_username").val();
+        var _name = $("#sign_name").val();
+        var _lastname = $("#sign_lastname").val();
         var _email = $("#sign_email").val();
         var _password = $("#sign_password").val();
-        var _date = $("#sign_date").val();
 
-        if(_name == "" && _username == "" && _email == ""  && _password == "" && _date  == ""){
+        if(_name == "" || _username == "" || _email == ""  || _password == ""){
             Swal.fire({
                 title: 'Empty Requirements!',
                 text: 'Enter all requeriments',
@@ -44,6 +46,10 @@ $(document).ready(function(){
               })
         }
         else{
+            $.post("registro.php",{role:_role, urename:_username, name:_name, lastname:_lastname, email:_email, password:_password},function(){
+
+            });
+            
             Swal.fire({
                 title: 'It´s ok!',
                 text: 'Welcome!',
@@ -52,11 +58,6 @@ $(document).ready(function(){
               })  
         }
 
-
-
-        
-
-      
        
     });
 

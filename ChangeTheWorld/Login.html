@@ -59,34 +59,32 @@
         <form action="#" method="POST" class="sign-up-form">
           <h2 class="title">Sing in</h2>
           <label for="tipo">Type:</label>
-          <select name="tipo" id="tipo" form="sign-in-form" class="selector">
-            <option value="Normal" selected>Student</option>
-            <option value="Creador">Teacher</option>
-
+          <select name="sign_type" id="sign_type" form="sign-in-form" class="selector">
+            <option value="Student" selected>Student</option>
+            <option value="Teacher">Teacher</option>
           </select>
-          <div class="input-field" id="border_name">
-            <i class="fas fa-user"></i>
-            <input type="text" placeholder="Name:" id="sign_name" />
-          </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username:" id="sign_username" />
+            <input type="text" placeholder="Username" id="sign_username" />
+          </div>
+          <div class="input-field" id="border_name">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" id="sign_name" />
+          </div>
+          <div class="input-field" id="border_name">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Lastname" id="sign_lastname" />
           </div>
           <div class="input-field" id="border_mail">
             <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email:" id="sign_email" />
+            <input type="text" placeholder="Email" id="sign_email" />
           </div>
           <div class="input-field" id="border_pass">
             <i class="fas fa-lock"></i>
-            <input type="text" placeholder="Password:" id="sign_password"
+            <input type="text" placeholder="Password" id="sign_password"
               title="Minimum 8 characters,Mayus, Numbers and  special digit " />
-
           </div>
-          <div class="input-field">
-            <i class="fas fa-lock"></i>
-            <input type="date" placeholder="Date:" id="sign_date" />
-          </div>
-          <input type="button" class="btn" value="Sing in" id="btn_signin" />
+          <input type="submit" class="btn" value="Sing in" id="btn_signin" />
           <p class="social-text">Sing in with a social network.</p>
           <div class="social-media">
             <a href="#" class="social-icon">
