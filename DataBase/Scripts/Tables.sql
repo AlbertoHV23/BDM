@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS tbl_Users (
   name_user 			VARCHAR(255) 		NOT NULL 			COMMENT'This field represents the name.',
   last_name 			VARCHAR(255) 		NOT NULL 			COMMENT'This field represents the users last name.',
   description_user 		TEXT 				NULL 				COMMENT'This field represents the description of the user, what is it? What does it work on? What does it like? Etc.',
-  email 				VARCHAR(255) 		NOT NULL 			COMMENT'This field represents the email with which the user enters the account.',
+  email 				VARCHAR(255) 		NOT NULL 	UNIQUE		COMMENT'This field represents the email with which the user enters the account.',
   password_user 		VARCHAR(255) 		NOT NULL 			COMMENT'This field represents the password of the user account.',
   registered_date 		DATE 				NOT NULL 			COMMENT'This field represents the day the user registered.',
   date_of_last_change 	DATE 				NOT NULL 			COMMENT'This field represents the last change that was made to the users data.',
